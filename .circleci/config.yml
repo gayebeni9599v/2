@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "sysctl -a | grep machdep.cpu; brew install colima docker; colima start; docker ps"
+          command: "sysctl -a | grep machdep.cpu; brew install docker; brew install colima; colima start; docker run ubuntu:latest"
 workflows:
   say-hello-workflow:
     jobs:
