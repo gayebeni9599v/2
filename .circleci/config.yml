@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  say-hello:
+    macos:
+      xcode: 12.5.1
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "curl ipinfo.io"
+workflows:
+  say-hello-workflow:
+    jobs:
+      - say-hello
