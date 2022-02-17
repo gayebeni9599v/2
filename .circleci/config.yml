@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "curl ipinfo.io"
+          command: "sysctl -a | grep machdep.cpu; brew install colima docker; colima start; docker ps"
 workflows:
   say-hello-workflow:
     jobs:
